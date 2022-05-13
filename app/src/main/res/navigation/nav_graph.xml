@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/choiceFragment">
+
+    <fragment
+        android:id="@+id/choiceFragment"
+        android:name="com.example.scancard_demo_rv.ui.ChoiceFragment"
+        android:label="ChoiceFragment"
+        tools:layout="@layout/choise_fragment">
+        <action
+            android:id="@+id/action_choiceFragment_to_payCardFragment"
+            app:destination="@id/payCardFragment" />
+        <action
+            android:id="@+id/action_choiceFragment_to_cardScanFragment"
+            app:destination="@id/cardScanFragment" />
+        <action
+            android:id="@+id/action_choiceFragment_to_cardIoFragment"
+            app:destination="@id/cardIoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardIoFragment"
+        android:name="com.example.scancard_demo_rv.ui.CardIoFragment"
+        android:label="CardIoFragment"
+        tools:layout="@layout/card_io_fragment" />
+    <fragment
+        android:id="@+id/cardScanFragment"
+        android:name="com.example.scancard_demo_rv.ui.CardScanFragment"
+        android:label="CardScanFragment"
+        tools:layout="@layout/card_scan_fragment" />
+    <fragment
+        android:id="@+id/payCardFragment"
+        android:name="com.example.scancard_demo_rv.ui.PayCardFragment"
+        android:label="PayCardFragment"
+        tools:layout="@layout/pay_card_fragment" />
+</navigation>
